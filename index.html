@@ -1,0 +1,43 @@
+<!DocTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+</head>
+
+<body>
+
+
+
+<div id='nickApp'>
+
+<a v-bind:href="blogURL">{{ passObject(firstname, lastname).name }}</a>
+
+</div>
+
+<script src='vue.js'></script>
+<script type="text/javascript">
+	new Vue({
+		el:'#nickApp',
+		data: {
+			firstname: 'Nick',
+			lastname: 'Vaughn',
+			blogURL: 'http://mglomb.com'
+
+		},
+		methods: {
+
+			passObject: function(first, last){
+				return{
+					name: first + ' ' + last
+				};
+			}
+		}
+	});
+</script>
+
+
+</body>
+
+</html>
